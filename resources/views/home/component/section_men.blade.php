@@ -1,4 +1,4 @@
-<!-- ***** Men Area Starts ***** -->
+
 <section class="section" id="men">
     <div class="container">
         <div class="row">
@@ -13,9 +13,13 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                @include('home.component.item.men_item')
+                <div class="men-item-carousel">
+                    <div class="owl-men-item owl-carousel">
+                        @include('home.component.item.men_item')
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- ***** Men Area Ends ***** -->
+

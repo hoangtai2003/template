@@ -12,7 +12,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                @include('home.component.item.women_item')
+
+                <div class="women-item-carousel">
+                    <div class="owl-women-item owl-carousel">
+                        @include('home.component.item.women_item')
+                    </div>
+                </div>
             </div>
         </div>
     </div>

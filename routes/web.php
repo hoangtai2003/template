@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,11 +15,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-//Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
-//Route::get('/about', 'App\Http\Controllers\HomeController@about');
-Route::get('/', function () {
-    return view('home.home');
-});
+Route::get('/', [HomeController::class, "index"]);
+Route::get('/admin', [HomeController::class, "admin"]);
+Route::get('/login',[AdminController::class, "loginAdmin"]);
+Route::post('/login', [AdminController::class, "postLoginAdmin"]);
 Route::get('/about', [
     'as' => 'about.about',
     'uses' => 'App\Http\Controllers\HomeController@about',
@@ -35,3 +35,4 @@ Route::get('/product_detail', [
     'as' => 'product_detail.product_detail',
     'uses' => 'App\Http\Controllers\HomeController@product_detail',
 ]);
+

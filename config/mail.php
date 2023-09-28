@@ -52,14 +52,14 @@ return [
 
         'mailgun' => [
             'transport' => 'mailgun',
-            // 'client' => [
+            // 'admin' => [
             //     'timeout' => 5,
             // ],
         ],
 
         'postmark' => [
             'transport' => 'postmark',
-            // 'client' => [
+            // 'admin' => [
             //     'timeout' => 5,
             // ],
         ],
