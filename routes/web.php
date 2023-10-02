@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\Login;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\AdminController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\logout;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,8 +20,9 @@ Route::get('/', [HomeController::class, "index"]);
 Route::middleware(['auth'])->group(function (){
     Route::get('/admin', [HomeController::class, "admin"])->name('admin');
 });
-Route::get('/login',[AdminController::class, "index"])->name('login');
-Route::post('/admin/users/login/postLogin', [AdminController::class, "postLogin"]);
+Route::get('/login',[Login::class, "index"])->name('login');
+Route::post('/login/postLogin', [Login::class, "postLogin"]);
+Route::post('/logout', [logout::class, 'destroy'])->name('logout');
 Route::get('/about', [
     'as' => 'about.about',
     'uses' => 'App\Http\Controllers\HomeController@about',

@@ -127,5 +127,11 @@
                 <i class="fas fa-th-large"></i>
             </a>
         </li>
+        <li>
+            <form action="{{route('logout')}}" method="post">
+                @csrf
+                <button type="submit">Logout</button>
+            </form>
+        </li>
     </ul>
 </nav>

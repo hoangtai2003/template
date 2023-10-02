@@ -10,7 +10,7 @@
         <div class="card">
             <div class="card-body login-card-body">
                 @include('admin.users.alert')
-                <form action="/admin/users/login/postLogin" method="post">
+                <form action="login/postLogin" method="post">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" placeholder="Email" name="email">
