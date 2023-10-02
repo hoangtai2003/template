@@ -16,9 +16,11 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/', [HomeController::class, "index"]);
-Route::get('/admin', [HomeController::class, "admin"]);
-Route::get('/login',[AdminController::class, "loginAdmin"]);
-Route::post('/login', [AdminController::class, "postLoginAdmin"]);
+Route::middleware(['auth'])->group(function (){
+    Route::get('/admin', [HomeController::class, "admin"])->name('admin');
+});
+Route::get('/login',[AdminController::class, "index"])->name('login');
+Route::post('/admin/users/login/postLogin', [AdminController::class, "postLogin"]);
 Route::get('/about', [
     'as' => 'about.about',
     'uses' => 'App\Http\Controllers\HomeController@about',

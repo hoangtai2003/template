@@ -320,11 +320,11 @@ function getClientRect(offsets) {
 }
 
 /**
- * Get bounding admin rect of given element
+ * Get bounding client rect of given element
  * @method
  * @memberof Popper.Utils
  * @param {HTMLElement} element
- * @return {Object} admin rect
+ * @return {Object} client rect
  */
 function getBoundingClientRect(element) {
   let rect = {};
