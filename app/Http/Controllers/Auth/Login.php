@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Auth;
 class Login extends Controller
 {
     public function index(){
-//        if (Auth::check()){
-//            return redirect()->to('login');
-//        }
+        if (Auth::check()){
+            return redirect()->route('admin');
+        }
         return view('admin.users.login');
     }
     public function postLogin(Request $request)
@@ -28,7 +28,6 @@ class Login extends Controller
         ], $remember)) {
             return redirect()->route('admin');
         }
-
         return redirect()->back();
     }
 

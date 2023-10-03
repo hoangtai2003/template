@@ -25,9 +25,9 @@
     <div class="thumb">
         <div class="hover-content">
             <ul>
-                <li><a href="{{route('product_detail.product_detail')}}"><i class="fa fa-eye"></i></a></li>
-                <li><a href="{{route('product_detail.product_detail')}}"><i class="fa fa-star"></i></a></li>
-                <li><a href="{{route('product_detail.product_detail')}}"><i class="fa fa-shopping-cart"></i></a></li>
+                <li><a href=""><i class="fa fa-eye"></i></a></li>
+                <li><a href=""><i class="fa fa-star"></i></a></li>
+                <li><a href=""><i class="fa fa-shopping-cart"></i></a></li>
             </ul>
         </div>
         <img src="/Hexashop/assets/images/men-02.jpg" alt="">

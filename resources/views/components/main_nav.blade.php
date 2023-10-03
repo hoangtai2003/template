@@ -1,5 +1,4 @@
 <nav class="main-nav">
-    <!-- ***** Logo Start ***** -->
     <a href="index.html" class="logo">
         <img src="/Hexashop/assets/images/logo.png">
     </a>
@@ -12,10 +11,10 @@
         <li class="submenu">
             <a href="javascript:;">Pages</a>
             <ul>
-                <li><a href="{{route('about.about')}}">About Us</a></li>
-                <li><a href="{{route('product.product')}}">Products</a></li>
-                <li><a href="{{route('product_detail.product_detail')}}">Single Product</a></li>
-                <li><a href="{{route('contact.contact')}}">Contact Us</a></li>
+                <li><a href="{{route('about')}}">About Us</a></li>
+                <li><a href="{{route('product')}}">Products</a></li>
+                <li><a href="{{route('product_detail')}}">Single Product</a></li>
+                <li><a href="{{route('contact')}}">Contact Us</a></li>
             </ul>
         </li>
         <li class="submenu">
